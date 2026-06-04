@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班级留言板</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-wrap">
+            <div class="logo">治愈日记小站</div>
+            <ul class="nav-list">
+                <li><a href="index.html">首页打卡</a ></li>
+                <li><a href="diary.html">日记合集</a ></li>
+                <li><a href="mood.html">心情统计</a ></li>
+                <li><a href="message-board.html">留言板</a ></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>写下留言</h2>
+            <form id="msgForm">
+                <div class="form-item">
+                    <label>昵称</label>
+                    <input type="text" id="msgName" placeholder="输入昵称">
+                </div>
+                <div class="form-item">
+                    <label>留言内容</label>
+                    <textarea id="msgText" rows="3" placeholder="留下一句心里话"></textarea>
+                </div>
+                <button>提交留言</button>
+            </form>
+        </section>
+        <section>
+            <h2>全部留言</h2>
+            <div class="msg-box" id="msgWrap">
+                <!--JS动态生成留言-->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>治愈系心情日记 ©2026 ZSY网页设计与开发结课作业</p >
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

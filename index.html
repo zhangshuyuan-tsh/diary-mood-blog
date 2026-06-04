@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心情日记 | 首页</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--头部导航 HTML5语义标签header-->
+    <header>
+        <div class="nav-wrap">
+            <div class="logo">治愈日记小站</div>
+            <ul class="nav-list">
+                <li><a href="index.html " class="active">首页打卡</a ></li>
+                <li><a href="diary.html">日记合集</a ></li>
+                <li><a href="mood.html">心情统计</a ></li>
+                <li><a href="message-board.html">留言板</a ></li>
+            </ul>
+        </div>
+    </header>
+
+    <!--主体main-->
+    <main>
+        <section>
+            <h2>今日治愈语录</h2>
+            <div class="banner">
+                <div class="banner-text" id="lunbo">慢慢理解世界，慢慢更新自己</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>今日心情打卡</h2>
+            <form id="moodForm">
+                <div class="form-item">
+                    <label>选择今日心情</label>
+                    <select id="moodSelect">
+                        <option value="开心">开心😊</option>
+                        <option value="平淡">平淡☁️</option>
+                        <option value="难过">难过💧</option>
+                        <option value="忙碌">忙碌💼</option>
+                        <option value="治愈">治愈✨</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label>简短日记</label>
+                    <textarea id="diaryText" rows="4" placeholder="写下今天的小故事..."></textarea>
+                </div>
+                <button type="submit">保存打卡</button>
+            </form>
+        </section>
+    </main>
+
+    <!--页脚footer-->
+    <footer>
+        <p>治愈系心情日记 ©2026 ZSY网页设计与开发结课作业</p >
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

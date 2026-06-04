@@ -1,0 +1,194 @@
+/*全局变量-莫兰迪配色*/
+:root{
+    --m-bg:#DCD6CC;
+    --m-soft:#BFB5A9;
+    --m-main:#A89C94;
+    --m-dark:#94847C;
+    --m-text:#4a4440;
+    --white:#f8f6f3;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Microsoft Yahei",serif;
+}
+body{
+    background:var(--m-bg);
+    color:var(--m-text);
+    line-height:1.6;
+    /*背景缓慢渐变动画*/
+    animation:bgChange 30s infinite alternate;
+    min-height:100vh;
+}
+@keyframes bgChange{
+    0%{background:#DCD6CC;}
+    50%{background:#e2ddd5;}
+    100%{background:#d9d2c8;}
+}
+/*头部导航*/
+header{
+    background:var(--m-main);
+    padding:1rem 5%;
+    position:sticky;
+    top:0;
+    z-index:99;
+}
+.nav-wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.logo{
+    font-size:1.5rem;
+    color:var(--white);
+    font-weight:bold;
+}
+.nav-list{
+    display:flex;
+    gap:2rem;
+    list-style:none;
+}
+.nav-list a{
+    color:var(--white);
+    text-decoration:none;
+    padding:6px 12px;
+    border-radius:6px;
+    transition:0.3s ease;
+}
+.nav-list a:hover{
+    background:var(--m-dark);
+}
+/*主体容器通用*/
+main{
+    max-width:1200px;
+    margin:3rem auto;
+    padding:0 20px;
+}
+section{
+    margin-bottom:4rem;
+}
+h2{
+    margin-bottom:1.5rem;
+    color:var(--m-dark);
+    border-left:4px solid var(--m-dark);
+    padding-left:10px;
+}
+/*轮播样式*/
+.banner{
+    background:var(--white);
+    padding:2rem;
+    border-radius:12px;
+    overflow:hidden;
+    position:relative;
+    min-height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.banner-text{
+    text-align:center;
+    font-size:1.2rem;
+    transition:all 0.5s;
+}
+/*表单通用*/
+form{
+    background:var(--white);
+    padding:2rem;
+    border-radius:12px;
+}
+.form-item{
+    margin:1rem 0;
+}
+label{
+    display:block;
+    margin-bottom:6px;
+}
+input,select,textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid var(--m-soft);
+    border-radius:6px;
+    outline:none;
+    font-size:1rem;
+}
+button{
+    background:var(--m-main);
+    color:#fff;
+    border:none;
+    padding:10px 26px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+button:hover{
+    background:var(--m-dark);
+}
+/*日记卡片Grid布局*/
+.diary-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:1.8rem;
+}
+.diary-card{
+    background:var(--white);
+    padding:1.5rem;
+    border-radius:12px;
+    transition:0.3s ease;
+}
+.diary-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 8px 18px #b9b1a777;
+}
+/*表格样式*/
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:var(--white);
+    border-radius:12px;
+    overflow:hidden;
+}
+th,td{
+    padding:12px;
+    border:1px solid var(--m-soft);
+    text-align:center;
+}
+th{
+    background:var(--m-main);
+    color:#fff;
+}
+/*留言区域flex*/
+.msg-box{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    margin-top:2rem;
+}
+.msg-item{
+    background:var(--white);
+    padding:1rem;
+    border-radius:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+/*页脚*/
+footer{
+    text-align:center;
+    padding:2rem;
+    background:var(--m-main);
+    color:#fff;
+    margin-top:5rem;
+}
+/*移动端适配*/
+@media(max-width:768px){
+    .nav-list{
+        margin-top:1rem;
+        flex-wrap:wrap;
+        gap:1rem;
+    }
+    .diary-grid{
+        grid-template-columns:1fr;
+    }
+}

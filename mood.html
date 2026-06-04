@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心情数据统计</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-wrap">
+            <div class="logo">治愈日记小站</div>
+            <ul class="nav-list">
+                <li><a href="index.html">首页打卡</a ></li>
+                <li><a href="diary.html">日记合集</a ></li>
+                <li><a href="mood.html">心情统计</a ></li>
+                <li><a href="message-board.html">留言板</a ></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>月度心情打卡统计表</h2>
+            <table id="moodTable">
+                <thead>
+                    <tr>
+                        <th>心情类型</th>
+                        <th>打卡次数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>开心</td><td id="happy">0</td></tr>
+                    <tr><td>平淡</td><td id="normal">0</td></tr>
+                    <tr><td>难过</td><td id="sad">0</td></tr>
+                    <tr><td>忙碌</td><td id="work">0</td></tr>
+                    <tr><td>治愈</td><td id="heal">0</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>治愈系心情日记 ©2026 ZSY网页设计与开发结课作业</p >
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
