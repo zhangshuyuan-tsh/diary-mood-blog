@@ -142,9 +142,20 @@ renderMsg();
 function goPage(url){
     location.replace(url);
 }
-//子页面优化返回：按一次后退直接回到打开网站之前
+//优化手机返回逻辑
 const path = location.href;
-if(!path.includes("index.html")){
-    history.replaceState({}, "", "index.html");
-    history.pushState({}, "", location.href);
+//首页预先压一条历史，方便一键退出
+if(path.includes("index.html")){
+    history.pushState({},'',path);
+}else{
+    //子页面替换历史，返回一次就回首页
+    history.replaceState({},'','index.html');
+    history.pushState({},'',path);
 }
+//监听物理返回键
+window.addEventListener('popstate',()=>{
+    //在首页触发返回，关闭页面
+    if(location.href.includes('index.html')){
+        window.close();
+    }
+})
