@@ -156,6 +156,6 @@ if(path.includes("index.html")){
 window.addEventListener('popstate',()=>{
     //在首页触发返回，关闭页面
     if(location.href.includes('index.html')){
-        window.close();
+        history.go(-(history.length-1));
     }
 })
