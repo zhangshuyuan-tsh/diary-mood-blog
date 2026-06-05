@@ -138,3 +138,13 @@ if(msgForm){
     })
 }
 renderMsg();
+//导航无历史跳转函数
+function goPage(url){
+    location.replace(url);
+}
+//子页面优化返回：按一次后退直接回到打开网站之前
+const path = location.href;
+if(!path.includes("index.html")){
+    history.replaceState({}, "", "index.html");
+    history.pushState({}, "", location.href);
+}
