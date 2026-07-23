@@ -36,7 +36,7 @@ function saveUserName(name) {
     const pwdModal = document.getElementById("pwdModal");
     const pwdInput = document.getElementById("pwdInput");
     const pwdSubmit = document.getElementById("pwdSubmit");
-    const CORRECT_PWD = "123456";
+    //const CORRECT_PWD = "123456";
     const isFirstPass = localStorage.getItem("systemFirstPass");
 
     if(pwdModal) {
@@ -49,7 +49,8 @@ function saveUserName(name) {
         if(pwdSubmit){
             pwdSubmit.onclick = function(){
                 let inputPwd = pwdInput.value.trim();
-                if(inputPwd === CORRECT_PWD){
+                //if(inputPwd === CORRECT_PWD){
+                  if(inputPwd.length  >= 6){ // 软著要求密码长度不少于6位
                     localStorage.setItem("systemFirstPass", "ok");
                     pwdModal.style.display = "none";
                 }else{
@@ -325,3 +326,4 @@ function saveUserName(name) {
             userShowDom.innerText = "当前用户：" + getUserName();
         }
     });
+ 
